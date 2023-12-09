@@ -1,6 +1,6 @@
 import {Buttons, Menu, MenuBack, MenuButton, MenuHeader} from "./styled.tsx";
 import {useNavigate} from "react-router-dom";
-import {ADD_ABONEMENT, ADD_BOA, BOOKS, PRINT} from "../../consts/routes.ts";
+import {ADD_ABONEMENT, ADD_BOA, ADD_BOOK, BOOKS, PRINT} from "../../consts/routes.ts";
 
 const MainMenu = () => {
     const navigate = useNavigate();
@@ -21,6 +21,10 @@ const MainMenu = () => {
         navigate(PRINT)
     }
 
+    const handleOpenAddBook = () => {
+        navigate(ADD_BOOK)
+    }
+
     return (
         <Menu>
             <MenuHeader>
@@ -32,6 +36,8 @@ const MainMenu = () => {
                     <MenuButton onClick={handleOpenAddAbonement}>Добавить абонемент</MenuButton>
                     <MenuButton onClick={handleOpenAddBoa}>Добавить книгу в аб.</MenuButton>
                     <MenuButton onClick={handleOpenPrint}>Печать отчёта</MenuButton>
+                    <MenuButton onClick={handleOpenAddBook}>Добавить книгу</MenuButton>
+                    <MenuButton onClick={handleOpenAddBook}>Просмотреть абонементы</MenuButton>
                 </Buttons>
             </MenuBack>
         </Menu>

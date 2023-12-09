@@ -25,7 +25,7 @@ export const MenuBack = styled.div`
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 330px;
+  height: 500px;
 `;
 
 export const Buttons = styled.div`
